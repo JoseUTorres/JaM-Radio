@@ -1,0 +1,16 @@
+#headerImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.main-page-wrapper {
+    max-width: 1000px;
+    margin: auto;
+}
+.sidebar {
+    float: left;
+}
+.main-content {
+    
+}
