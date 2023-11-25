@@ -11,14 +11,57 @@
 </head>
 <body>
 
-    <header><img id="headerImg" src="assets/jam header.png"></header>
+    <header>
+        <h2>JaM Queue</h2>
+    </header>
     <div class="main-page-wrapper">
-        <!-- topbar -->
-        <!-- sidebar -->
-        <div class="sidebar">sidebar</div>
-        <!-- main content -->
-        <div class="main-content">main</div>
+        <!-- music player -->
+        <div id="player" class="global-item draggable">
+            <div id="playerheader" class="drag-header">
+                <span class="icon"></span>
+                <span class="spacer">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
+                <h2>JaM Queue</h2>
+            </div>
+            <div class="inner-wrapper">
+                <div class="bars-wrapper">TEXT
+
+                </div>
+                <div class="inner-size">
+                    <div class="select-relative">
+                        <div class="select-wrapper">
+                            <strong>Playlist:</strong>
+                            <span>JaM Queue (Default) </span>
+                        </div>
+                    </div>
+                    <div class="current-track">
+                        <div class="timer">
+                            <span>0:00</span>
+                             / 
+                            <span>3:15</span>
+                        </div>
+                        <h3>Example Title long text example testing</h3>
+                        <h2>Example Artist</h2>
+                    </div>
+                    <div class="flex">
+                        <button class="previous">
+                            <span>Previous</span>
+                        </button>
+                        <button class="play-pause paused">
+                            <span>Play</span>
+                        </button>
+                        <button class="next">
+                            <span>Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     
 </body>
+<script src="js/drag.js"></script>
 </html>

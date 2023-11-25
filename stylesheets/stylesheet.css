@@ -1,16 +1,201 @@
+@font-face {
+    font-family: 'FA Sysfont C';
+    src: url('../fonts/sysfont.woff') format('woff'),
+         url('../fonts/sysfont.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'PIXEARG';
+    src: url('../fonts/PIXEARG_.TTF');
+}
+* {
+    image-rendering: pixelated;
+    box-sizing: border-box;
+}
+header {
+    height: 20px;
+    background: #f9efe4;
+    border-bottom: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background .1s ease-in-out;
+    position: relative;
+}
+body {
+    font-family: 'FA Sysfont C';
+    background: #f9efe4;
+    margin: 0;
+}
+h2, h3 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+h2 {
+    font-size: 14px;
+    margin: 0;
+}
+h3 {
+    font-size: 14px;
+    height: 16px;
+    margin: 0 0 6px 0;
+}
+strong {
+    font-size: 14px;
+    margin: 0;
+}
 #headerImg {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
 }
-.main-page-wrapper {
-    max-width: 1000px;
+.global-item {
+    border: 1px solid #000;
+    box-shadow: inset -1px -1px 0 0 #c2b9b1,inset 1px 1px 0 0 #fff,5px 5px 0 #0003;
+    background: #f9efe4;
+    display: flex;
+    flex-direction: column;
+    z-index: 1!important;
+    pointer-events: all;
+    transition: background .01s ease-in-out;
+}
+#player {
+    min-height: 220px;
+    height: 220px;
+    width: 280px;
+}
+.draggable {
+    position: absolute;
+}
+.drag-header {
+    cursor: move;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    height: 21px;
+    width: 100%;
+    user-select: none;
+}
+.icon {
+    border: 1px solid #000;
+    position: relative;
+    top: 0;
+    left: 0;
+    content: " ";
+    width: 9px;
+    height: 9px;
+    padding: 4px;
+    background: url("../assets/close-icon.png") no-repeat 50%;
+}
+.global-item .drag-header .spacer {
+    flex: 1;
+    margin: 0;
+    padding: 5px;
+}
+.global-item .drag-header .spacer i{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #000;
+    border-bottom: 1px solid #fff;
+}
+.inner-size {
+    margin: 15px;
+}
+.select-relative {
+    position: relative;
+}
+.select-wrapper {
+    margin: -15px -10px 15px -10px;
+    width: calc(100% + 20px);
+    position: relative;
+    border: none!important;
+    border-bottom: 1px solid #000!important;
+    padding: 1.125em 15px .65em 7px;
+}
+.select-wrapper::after {
+    background: url('../assets/dropdown.png') no-repeat 50%;
+    position: absolute;
+    top: 22px;
+    right: 7px;
+    content: "";
+    width: 10px;
+    height: 10px;
+}
+.select-wrapper span {
+    position: relative;
+    top: 0;
+    font-family: 'PIXEARG'; 
+    font-size: 8px;
+}
+.timer {
+    font-family: 'PIXEARG';
+    font-size: 8px;
+    padding-bottom: 0.75em;
+}
+.inner-size h2 {
+    font-family: 'PIXEARG';
+    font-size: 8px;
+    overflow: hidden;
+}
+.flex {
+    display: flex;
+}
+.flex button {
+    border: 1px solid #000;
+    display: block;
+    border-radius: 3px;
+    width: 100%;
+    background: #0000;
+    padding: 0.5em 0;
+    font-family: Chicago;
+    text-align: center;
+    outline: none;
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+    margin-top: 1em;
+}
+.flex .previous {
+    border-radius: 3px 0 0 3px;
+    border-right: 0;
+}
+.flex .play-pause {
+    border-radius: 0;
+}
+.flex .next {
+    border-radius: 0 3px 3px 0;
+    border-left: 0;
+}
+.flex button span {
+    text-indent: -9999px;
+    display: block;
+    width: 12px;
+    height: 11px;
     margin: auto;
 }
-.sidebar {
-    float: left;
+.flex button.previous span {
+    background: url('../assets/prev.png') no-repeat 50%;
 }
-.main-content {
-    
+.flex button.play-pause.paused span {
+    background: url('../assets/play.png') no-repeat 50%;
+}
+.flex button.play-pause.playing span {
+    background: url('../assets/pause.png') no-repeat 50%;
+}
+.flex button.next span {
+    background: url('../assets/next.png') no-repeat 50%;
+}
+.global-item::after {
+    height: 12px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    background: url('../assets/fuzz.png') no-repeat 50%;
+    pointer-events: none;
+    content: " ";
+    display: block;
 }
