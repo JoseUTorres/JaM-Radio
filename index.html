@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- stylesheets -->
     <link rel="stylesheet" href="stylesheets/stylesheet.css">
     <!-- title -->
@@ -27,33 +29,43 @@
                 <h2>JaM Queue</h2>
             </div>
             <div class="inner-wrapper">
-                <div class="bars-wrapper">TEXT
-
-                </div>
                 <div class="inner-size">
-                    <div class="select-relative">
+                    <div id="bars-wrapper">
+                        <div class="visualizer-container"></div>
+                    </div>
+                    <div id="select-relative" class="select-relative">
                         <div class="select-wrapper">
                             <strong>Playlist:</strong>
-                            <span>JaM Queue (Default) </span>
+                            <span id="displayPlaylist">JaM Queue (Default) </span>
+                        </div>
+                        <div id="select-list" class="select-options-scroll">
+                            <ul class="playlists">
+                                <li id="defaultPlaylist">JaM Queue (Default)</li>
+                                <li id="ourPlaylist">our playlist</li>
+                                <li id="bestiePlaylist">BESTIIIEEEEE</li>
+                                <li id="somewherePlaylist">somewhere only we know</li>
+                                <li id="ohPlaylist">oh u like playlists? name every playlist ever made.</li>
+                                <li id="dryPlaylist">for the dry texter</li>
+                            </ul>
                         </div>
                     </div>
                     <div class="current-track">
-                        <div class="timer">
-                            <span>0:00</span>
+                        <div id="trackTime" class="timer">
+                            <span id="currTime">...</span>
                              / 
-                            <span>3:15</span>
+                            <span id="totalTime">...</span>
                         </div>
-                        <h3>Example Title long text example testing</h3>
-                        <h2>Example Artist</h2>
+                        <h3 id="titleTrack">Loading ...</h3>
+                        <h2 id="artistName">We'll be right back</h2>
                     </div>
-                    <div class="flex">
-                        <button class="previous">
+                    <div id="control-wrapper" class="flex">
+                        <button id="prev" class="previous">
                             <span>Previous</span>
                         </button>
-                        <button class="play-pause paused">
+                        <button id="play-pause" class="play-pause paused">
                             <span>Play</span>
                         </button>
-                        <button class="next">
+                        <button id="next" class="next">
                             <span>Next</span>
                         </button>
                     </div>
@@ -64,4 +76,7 @@
     
 </body>
 <script src="js/drag.js"></script>
+<script src="js/player.js"></script>
+<script src="js/visualizer.js"></script>
+<script src="js/listeners.js"></script>
 </html>
