@@ -1,5 +1,7 @@
 // Make the DIV element draggable:
 dragElement(document.getElementById("player"));
+dragElement(document.getElementById("big-frame"));
+dragElement(document.getElementById("small-frame"));
 
 function dragElement(elmnt) {
 	var pos1 = 0,

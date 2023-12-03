@@ -13,10 +13,48 @@
 </head>
 <body>
 
-    <header>
+    <header id="header">
         <h2>JaM Queue</h2>
     </header>
-    <div class="main-page-wrapper">
+    <div id="intro">
+        <span id="firstP"></span>
+        <p id="secondP">- j</p>
+        <p id="press">PRESS SPACE TO ENTER</p>
+    </div>
+    <div id="everything" class="main-page-wrapper">
+        <!-- big frame -->
+        <div id="big-frame" class="global-item draggable">
+            <div class="drag-header">
+                <span class="icon"></span>
+                <span class="spacer">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
+                <h2>JaM Queue</h2>
+            </div>
+            <div class="inner-wrapper">
+                <div class="image-wrapper">
+                    <img class="big-pic" src="assets/scenery/70290012.JPG" alt="oops">
+                </div>
+            </div>
+        </div>
+        <!-- small frame -->
+        <div id="small-frame" class="global-item draggable">
+            <div class="drag-header">
+                <span class="icon"></span>
+                <span class="spacer">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
+            </div>
+            <div class="inner-wrapper">
+                <div class="image-wrapper bottom-margins">
+                    <img class="small-pic" src="assets/memories/IMG_7677.jpg" alt="oops">
+                </div>
+            </div>
+        </div>
         <!-- music player -->
         <div id="player" class="global-item draggable">
             <div id="playerheader" class="drag-header">
@@ -62,7 +100,7 @@
                         <button id="prev" class="previous">
                             <span>Previous</span>
                         </button>
-                        <button id="play-pause" class="play-pause paused">
+                        <button id="play-pause" class="play-pause playing">
                             <span>Play</span>
                         </button>
                         <button id="next" class="next">
@@ -75,6 +113,7 @@
     </div>
     
 </body>
+<script src="js/intro.js"></script>
 <script src="js/drag.js"></script>
 <script src="js/player.js"></script>
 <script src="js/visualizer.js"></script>

@@ -41,7 +41,8 @@ function createVisualizer() {
 			const index = (i + 10) * 2;
 			// fd is a frequency value between 0 and 255
 			const fd = frequencyData[index];
-
+			const ratio = (fd * 100) / 255;
+			const ratioBar = (ratio * visualizerContainer.offsetHeight)  / 100;
 			// Fetch the bar DIV element
 			const bar = document.querySelector("#bar" + i);
 			if (!bar) {
@@ -50,7 +51,7 @@ function createVisualizer() {
 
 			// If fd is undefined, default to 0, then make sure fd is at least 4
 			// This will make make a quiet frequency at least 4px high for visual effects
-			const barHeight = Math.max(5, fd * 0.1 || 0);
+			const barHeight = Math.max(5, ratioBar || 0);
 			bar.style.height = barHeight + "px";
 		}
 
