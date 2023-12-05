@@ -55,6 +55,22 @@
                 </div>
             </div>
         </div>
+        <!-- album cover -->
+        <div id="album-frame" class="global-item draggable">
+            <div class="drag-header">
+                <span class="icon"></span>
+                <span class="spacer">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
+            </div>
+            <div class="inner-wrapper">
+                <div class="image-wrapper bottom-margins">
+                    <img id="album-cover" alt="oops">
+                </div>
+            </div>
+        </div>
         <!-- music player -->
         <div id="player" class="global-item draggable">
             <div id="playerheader" class="drag-header">
@@ -78,7 +94,7 @@
                         </div>
                         <div id="select-list" class="select-options-scroll">
                             <ul class="playlists">
-                                <li id="defaultPlaylist">JaM Queue (Default)</li>
+                                <li id="jqPlaylist">JaM Queue (Default)</li>
                                 <li id="ourPlaylist">our playlist</li>
                                 <li id="bestiePlaylist">BESTIIIEEEEE</li>
                                 <li id="somewherePlaylist">somewhere only we know</li>
@@ -113,6 +129,7 @@
     </div>
     
 </body>
+<script src="js/playlists.js"></script>
 <script src="js/intro.js"></script>
 <script src="js/drag.js"></script>
 <script src="js/player.js"></script>

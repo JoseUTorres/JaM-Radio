@@ -2,6 +2,7 @@
 dragElement(document.getElementById("player"));
 dragElement(document.getElementById("big-frame"));
 dragElement(document.getElementById("small-frame"));
+dragElement(document.getElementById("album-frame"));
 
 function dragElement(elmnt) {
 	var pos1 = 0,

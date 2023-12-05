@@ -302,7 +302,7 @@ button:active {
 }
 #big-frame {
     width: 600px;
-    height: 620px;
+    height: 535px;
     top: 100px;
     left: 350px;
 }
@@ -315,8 +315,8 @@ button:active {
     display: block;
     width: 100%;
     height: auto;
-    min-height: 493px;
-    max-height: 493px;
+    min-height: 500px;
+    max-height: 500px;
     overflow: hidden;
     position: relative;
 }
@@ -344,4 +344,9 @@ button:active {
     margin: auto;
     justify-content: center;
     align-items: center;
+}
+#album-cover {
+    width: auto;
+    height: 300px;
+    display: block;
 }

@@ -1,28 +1,15 @@
-let defaultPlaylist = [
-	{
-		title: "Fireflies",
-		artist: "Pearl and The Oysters",
-		path: "../audio/Fireflies-Pearl and The Oysters.mp3",
-	},
-];
-let ourPlaylist = [
-	{
-		title: "It's Ok You're With Me",
-		artist: "Tyler, The Creator",
-		path: "../audio/it's okay you're with me.mp3",
-	},
-];
 let isLoading = false;
 let currentTrack = document.createElement("audio");
 let trackIndex = 0;
 let updateTimer;
 let isPlaying = false;
-let currentPlaylist = defaultPlaylist;
+let currentPlaylist = jqPlaylist;
 let playButton = document.getElementById("play-pause");
 let prevButton = document.getElementById("prev");
 let nextButton = document.getElementById("next");
 let currTime = document.getElementById("currTime");
 let totalTime = document.getElementById("totalTime");
+let albumCover = document.getElementById("album-cover");
 let displayPlaylist = document.getElementById("displayPlaylist");
 
 let titleTrack = document.getElementById("titleTrack");
@@ -44,8 +31,9 @@ function loadTrack(trackIndex, playlist) {
 	currentTrack.src = playlist[trackIndex].path;
 	currentTrack.load();
 
-	titleTrack.textContent = playlist[trackIndex].title;
-	artistName.textContent = playlist[trackIndex].artist;
+	titleTrack.textContent = playlist[trackIndex].name;
+	artistName.textContent = playlist[trackIndex].artists;
+	setAlbumCover(trackIndex, playlist);
 
 	updateTimer = setInterval(seekUpdate, 100);
 	isLoading = false;
@@ -138,6 +126,10 @@ function changePlaylist(playlist, playlistName) {
 	displayPlaylist.textContent = playlistName;
 	loadTrack(0, currentPlaylist);
 	playTrack();
+}
+
+function setAlbumCover(trackIndex, playlist) {
+	albumCover.src = playlist[trackIndex].cover_url;
 }
 
 $(document).ready(() => {
