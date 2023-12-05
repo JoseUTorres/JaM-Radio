@@ -1,3 +1,5 @@
+// initial z index high
+let zHighest = 1;
 // Make the DIV element draggable:
 dragElement(document.getElementById("player"));
 dragElement(document.getElementById("big-frame"));
@@ -20,11 +22,11 @@ function dragElement(elmnt) {
 	function dragMouseDown(e) {
 		e = e || window.event;
 		e.preventDefault();
-		let others = document.getElementsByClassName("onTop");
-		Array.from(others).forEach((el) => {
-			el.classList.remove("onTop");
-		});
-		elmnt.classList.add("onTop");
+		let zElements = document.getElementsByClassName("global-item");
+		for (var i = 0; i < zElements.length; i++) {
+			zHighest = Math.max(zElements[i].style.zIndex, zHighest);
+		}
+		elmnt.style.zIndex = zHighest + 2;
 		// get the mouse cursor position at startup:
 		pos3 = e.clientX;
 		pos4 = e.clientY;

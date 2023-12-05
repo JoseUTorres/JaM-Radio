@@ -358,6 +358,3 @@ button:active {
     top: 490px;
     left: 15px;
 }
-.onTop {
-    z-index: 99;
-}
