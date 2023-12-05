@@ -1,9 +1,11 @@
+let playListArray = [okPlaylist, jqPlaylist];
 let isLoading = false;
 let currentTrack = document.createElement("audio");
 let trackIndex = 0;
 let updateTimer;
 let isPlaying = false;
-let currentPlaylist = jqPlaylist;
+let currentPlaylist =
+	playListArray[Math.floor(Math.random() * playListArray.length)];
 let playButton = document.getElementById("play-pause");
 let prevButton = document.getElementById("prev");
 let nextButton = document.getElementById("next");
@@ -14,6 +16,8 @@ let displayPlaylist = document.getElementById("displayPlaylist");
 
 let titleTrack = document.getElementById("titleTrack");
 let artistName = document.getElementById("artistName");
+
+displayPlaylist.textContent = currentPlaylist[0].list_name;
 
 playButton.addEventListener("click", playpauseTrack);
 prevButton.addEventListener("click", () => {

@@ -26,9 +26,6 @@ let everything = document.getElementById("everything");
 let introElm = document.getElementById("intro");
 let callback = function spaceStart(e) {
 	if (e.key == " " || e.code == "Space" || e.keyCode == 32) {
-		// firstLine.style.display = "none";
-		// secondLine.style.display = "none";
-		// press.style.display = "none";
 		introElm.remove();
 		header.style.display = "flex";
 		everything.style.display = "block";

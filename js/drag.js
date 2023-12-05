@@ -20,6 +20,11 @@ function dragElement(elmnt) {
 	function dragMouseDown(e) {
 		e = e || window.event;
 		e.preventDefault();
+		let others = document.getElementsByClassName("onTop");
+		Array.from(others).forEach((el) => {
+			el.classList.remove("onTop");
+		});
+		elmnt.classList.add("onTop");
 		// get the mouse cursor position at startup:
 		pos3 = e.clientX;
 		pos4 = e.clientY;
