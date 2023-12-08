@@ -1,4 +1,4 @@
-const jqPlaylistPath = "../jqPlaylist/";
+const jqPlaylistPath = "./audio/jqPlaylist/";
 // const jqPlaylistPath = "https://github.com/joseutorres/JaM-Radio/blob/main/audio/jqPlaylist/sound.mp3?raw=true"
 const jqPlaylist = [
 	{
@@ -1211,7 +1211,7 @@ const jqPlaylist = [
 		list_length: 36,
 	},
 ];
-const okPlaylistPath = "../audio/okPlaylist/";
+const okPlaylistPath = "./audio/okPlaylist/";
 const okPlaylist = [
 	{
 		path: `${okPlaylistPath}Astrud Gilberto - The Shadow Of Your Smile - Love Theme From 'The Sandpiper'.mp3`,

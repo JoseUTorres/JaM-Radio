@@ -32,8 +32,7 @@ nextButton.addEventListener("click", () => {
 function loadTrack(trackIndex, playlist) {
 	clearInterval(updateTimer);
 
-	// currentTrack.src = playlist[trackIndex].path;
-	currentTrack.src = "../it's okay you're with me.mp3";
+	currentTrack.src = playlist[trackIndex].path;
 	currentTrack.load();
 
 	titleTrack.textContent = playlist[trackIndex].name;
