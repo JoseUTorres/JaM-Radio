@@ -12,7 +12,7 @@
     src: url('../fonts/Perfect\ DOS\ VGA\ 437.ttf');
 }
 * {
-    image-rendering: pixelated;
+    /* image-rendering: pixelated; */
     box-sizing: border-box;
 }
 header {
