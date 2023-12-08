@@ -42,7 +42,7 @@ function createVisualizer() {
 			// fd is a frequency value between 0 and 255
 			const fd = frequencyData[index];
 			const ratio = (fd * 100) / 255;
-			const ratioBar = (ratio * visualizerContainer.offsetHeight)  / 100;
+			const ratioBar = (ratio * visualizerContainer.offsetHeight) / 100;
 			// Fetch the bar DIV element
 			const bar = document.querySelector("#bar" + i);
 			if (!bar) {
