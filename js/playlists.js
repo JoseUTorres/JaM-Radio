@@ -1,9 +1,8 @@
-// const jqPlaylistPath = "../audio/jqPlaylist/";
-const jqPlaylistPath =
-	"https://github.com/joseutorres/JaM-Radio/blob/main/audio/jqPlaylist/";
+const jqPlaylistPath = "../jqPlaylist/";
+// const jqPlaylistPath = "https://github.com/joseutorres/JaM-Radio/blob/main/audio/jqPlaylist/sound.mp3?raw=true"
 const jqPlaylist = [
 	{
-		path: `${jqPlaylistPath}Count Bass D, MF DOOM - Quite Buttery.mp3?raw=true`,
+		path: `${jqPlaylistPath}Count Bass D, MF DOOM - Quite Buttery.mp3`,
 		name: "Quite Buttery",
 		artists: ["Count Bass D", "MF DOOM"],
 		artist: "Count Bass D",
