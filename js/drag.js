@@ -1,10 +1,10 @@
 // initial z index high
 let zHighest = 1;
 // Make the DIV element draggable:
-dragElement(document.getElementById("player"));
-dragElement(document.getElementById("big-frame"));
-dragElement(document.getElementById("small-frame"));
-dragElement(document.getElementById("album-frame"));
+let dragFrames = document.querySelectorAll(".draggable");
+dragFrames.forEach((frame) => {
+	dragElement(frame);
+});
 
 function dragElement(elmnt) {
 	var pos1 = 0,

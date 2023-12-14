@@ -128,7 +128,8 @@ function changePlaylist(playlist, playlistName) {
 	pauseTrack();
 	currentPlaylist = playlist;
 	displayPlaylist.textContent = playlistName;
-	loadTrack(0, currentPlaylist);
+	trackIndex = Math.floor(Math.random() * currentPlaylist.length);
+	loadTrack(trackIndex, currentPlaylist);
 	playTrack();
 }
 
@@ -136,6 +137,12 @@ function setAlbumCover(trackIndex, playlist) {
 	albumCover.src = playlist[trackIndex].cover_url;
 }
 
+const body = document.getElementById("everything");
 $(document).ready(() => {
+	body.style.setProperty("--app-height", `${window.innerHeight - 20}px`);
+	window.addEventListener("resize", () => {
+		body.style.setProperty("--app-height", `${window.innerHeight - 20}px`);
+	});
+	trackIndex = Math.floor(Math.random() * currentPlaylist.length);
 	loadTrack(trackIndex, currentPlaylist);
 });

@@ -16,6 +16,7 @@
     box-sizing: border-box;
 }
 header {
+    font-family: 'Perfect DOS';
     display: none; /* display flex */
     height: 20px;
     background: #f9efe4;
@@ -24,10 +25,12 @@ header {
     justify-content: space-between;
     transition: background .1s ease-in-out;
     position: relative;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 body {
     font-family: 'FA Sysfont C';
-    background: #f9efe4;
+    background: #E2D9CF;
     margin: 0;
 }
 h2, h3 {
@@ -56,6 +59,8 @@ strong {
 }
 .main-page-wrapper {
     display: none;
+    width: 100%;
+    height: var(--app-height);
 }
 .global-item {
     border: 1px solid #000;
@@ -87,7 +92,7 @@ strong {
     width: 100%;
     user-select: none;
 }
-.icon {
+.close-icon {
     border: 1px solid #000;
     position: relative;
     top: 0;
@@ -96,6 +101,7 @@ strong {
     width: 9px;
     height: 9px;
     padding: 4px;
+    cursor: pointer;
     background: url("../assets/icons/close-icon.png") no-repeat 50%;
 }
 .global-item .drag-header .spacer {
@@ -357,4 +363,104 @@ button:active {
 #album-frame {
     top: 490px;
     left: 15px;
+}
+.section-icons {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+}
+.section-icons ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.section-icons ul li {
+    pointer-events: all;
+    width: 83px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+::selection{
+    color: #fff;
+    background: #000;
+}
+.section-icons span {
+    font-family: "PIXEARG";
+    font-size: 8px;
+}
+.section-icons ul .is-active span {
+    background: #000!important;
+    border: 1px dotted #ccc!important;
+    color: #fff
+}
+.desktop-icon {
+    height: 35px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 7px;
+}
+#love-letter-frame {
+    height: 200px;
+    width: 350px;
+    overflow: hidden;
+    display: none;
+    top: 25%;
+    left: 25%;
+}
+.text-wrapper {
+    font-family: "PIXEARG";
+    font-size: 9px;
+    margin: 2px 4px -5px 4px;
+    position: relative;
+    border: 1px solid #000;
+    background: #fff;
+    display: block;
+    min-height: 170px;
+    max-height: 170px;
+    padding: 2px;
+}
+#daydreams-frame {
+    height: 400px;
+    width: 370px;
+    display: none;
+}
+.background-wrapper {
+    font-family: "PIXEARG";
+    font-size: 8px;
+    margin: 2px 4px -5px 4px;
+    position: relative;
+    border: 1px solid #000;
+    background: #fff;
+    display: block;
+    min-height: 370px;
+    max-height: 370px;
+    overflow: auto;
+}
+.background-wrapper ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.background-wrapper ul li {
+    margin-top: 5px;
+    pointer-events: all;
+    width: 84px;
+    height: 84px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+}
+.background-wrapper ul span {
+    margin-left: 20px;
+    background: rgb(249, 239, 228);
+    border-color: rgb(249, 239, 228);
+}
+:not(input):not(textarea) {
+    user-select: none;
 }
