@@ -13,6 +13,7 @@ let currTime = document.getElementById("currTime");
 let totalTime = document.getElementById("totalTime");
 let albumCover = document.getElementById("album-cover");
 let displayPlaylist = document.getElementById("displayPlaylist");
+let volumeSlider = document.querySelector(".volume-slider");
 
 let titleTrack = document.getElementById("titleTrack");
 let artistName = document.getElementById("artistName");
@@ -135,6 +136,10 @@ function changePlaylist(playlist, playlistName) {
 
 function setAlbumCover(trackIndex, playlist) {
 	albumCover.src = playlist[trackIndex].cover_url;
+}
+
+function setVolume() {
+	currentTrack.volume = volumeSlider.value / 100;
 }
 
 const body = document.getElementById("everything");

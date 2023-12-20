@@ -28,6 +28,68 @@ header {
     padding-left: 5px;
     padding-right: 5px;
 }
+header .right-nav {
+    float: right;
+    display: flex;
+}
+header .item {
+    height: 100%;
+    line-height: 20px;
+    padding: 0 6px;
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+}   
+.volume-icon {
+    position: relative;
+} 
+.slider {
+    position: absolute;
+    margin-top: 30px;
+    margin-left: -42px;
+    left: 50% !important;
+    right: auto !important;
+    text-align: center !important;
+    transform: translate(-50%, 0) !important;
+    z-index: 200;
+    height: 25px;
+    width: 89px;
+    list-style: none;
+    display: none;
+}
+.volume-slider {
+    transform: rotate(-90deg);
+}
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    background: #f9efe4;
+    height: 25px;
+    width: 90px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #000;
+    border-right: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #000;
+    width: 60px;
+    height: 1px;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #f9efe4 url("../assets/icons/dot.png") no-repeat;
+    width: 11px;
+    height: 11px;
+    border: none;
+    margin-top: -4.7px;
+}
 body {
     font-family: 'FA Sysfont C';
     background: #E2D9CF;
@@ -72,12 +134,12 @@ strong {
     pointer-events: all;
     transition: background .01s ease-in-out;
 }
-#player {
+#player-frame {
     min-height: 220px;
     height: 220px;
     width: 280px;
-    top: 150px;
-    left: 150px;
+    top: 15%;
+    left: 20%;
 }
 .draggable {
     position: absolute;
@@ -208,7 +270,7 @@ strong {
 .flex button.next span {
     background: url('../assets/icons/next.png') no-repeat 50%;
 }
-#player.global-item::after {
+#player-frame.global-item::after {
     height: 12px;
     right: 0;
     left: 0;
@@ -306,15 +368,15 @@ button:active {
     background-color: white;
     max-height: 28px;
 }
-#big-frame {
+#film-frame {
     width: 600px;
     height: 535px;
-    top: 100px;
-    left: 350px;
+    top: 20%;
+    left: 35%;
 }
-#small-frame {
-    top: 370px;
-    left: 890px;
+#daydreams-frame {
+    top: 60%;
+    left: 75%;
 }
 .image-wrapper {
     margin: 2px 4px -5px 4px;
@@ -361,8 +423,8 @@ button:active {
     display: block;
 }
 #album-frame {
-    top: 490px;
-    left: 15px;
+    top: 40%;
+    left: 11%;
 }
 .section-icons {
     position: absolute;
@@ -404,12 +466,12 @@ button:active {
     margin-bottom: 7px;
 }
 #love-letter-frame {
-    height: 200px;
+    height: 265px;
     width: 350px;
     overflow: hidden;
     display: none;
-    top: 25%;
-    left: 25%;
+    top: 19%;
+    left: 63%;
 }
 .text-wrapper {
     font-family: "PIXEARG";
@@ -419,48 +481,30 @@ button:active {
     border: 1px solid #000;
     background: #fff;
     display: block;
-    min-height: 170px;
-    max-height: 170px;
+    min-height: 148px;
+    max-height: 148px;
     padding: 2px;
-}
-#daydreams-frame {
-    height: 400px;
-    width: 370px;
-    display: none;
-}
-.background-wrapper {
-    font-family: "PIXEARG";
-    font-size: 8px;
-    margin: 2px 4px -5px 4px;
-    position: relative;
-    border: 1px solid #000;
-    background: #fff;
-    display: block;
-    min-height: 370px;
-    max-height: 370px;
-    overflow: auto;
-}
-.background-wrapper ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-}
-.background-wrapper ul li {
-    margin-top: 5px;
-    pointer-events: all;
-    width: 84px;
-    height: 84px;
-    flex-shrink: 0;
-    align-items: center;
-    justify-content: center;
-}
-.background-wrapper ul span {
-    margin-left: 20px;
-    background: rgb(249, 239, 228);
-    border-color: rgb(249, 239, 228);
+    line-height: 14px;
 }
 :not(input):not(textarea) {
     user-select: none;
+}
+.email-format {
+    display: flex;
+}
+.email-format ul {
+    font-family: "PIXEARG";
+    font-size: 9px;
+    list-style: none;
+    padding-left: 4px;
+}
+.email-format ul li {
+    margin: 3px 0px 11px 0px;
+}
+.email-format .email-fields li {
+    background: #fff;
+    width: 100%;
+    border: 1px solid #000;
+    padding: 2px 170px 2px 3px;
+    margin-bottom: 5px;
 }

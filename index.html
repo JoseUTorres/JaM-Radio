@@ -14,9 +14,24 @@
 <body>
 
     <header id="header">
-        <h2>m+j</h2>
-        <h2 id="clock" style="float: right;"></h2>
-        <h2 id="date" style="float: right;"></h2>
+        <span style="border: none;"class="item">m+j</span>
+        <div class="right-nav">
+            <span class="volume-icon">
+                <div id="volume-click" class="item">
+                    <img src="assets/icons/volume.png" alt="oop">
+                </div>
+                <ul class="slider">
+                    <li>
+                        <input type="range" min="0" max="100" value="100" class="volume-slider" onchange="setVolume()">
+                    </li>
+                </ul>
+                <!-- <div class="slider">
+                    <input type="range" min="1" max="100" value="99" class="volume-slider" onchange="setVolume()">
+                </div> -->
+            </span>
+            <span id="clock" class="item"></span>
+            <span id="date" class="item"></span>
+        </div>
     </header>
     <div id="intro">
         <span id="firstP"></span>
@@ -33,15 +48,39 @@
                         <div class="desktop-icon">
                             <img src="assets/icons/closed_envolope.png" alt="oops">
                         </div>
-                        <span>from j</span>
+                        <span>e-mail</span>
                     </div>
                 </li>
                 <li id="daydreams">
                     <div>
                         <div class="desktop-icon">
-                            <img src="assets/icons/camera.png" alt="oops">
+                            <img style="height: 32px;" src="assets/icons/clouds.png" alt="oops">
                         </div>
                         <span>daydreams</span>
+                    </div>
+                </li>
+                <li id="film">
+                    <div style="text-align: center;">
+                        <div class="desktop-icon">
+                            <img src="assets/icons/camera.png" alt="oops">
+                        </div>
+                        <span>film</span>
+                    </div>
+                </li>
+                <li id="player">
+                    <div>
+                        <div class="desktop-icon">
+                            <img src="assets/icons/cd.png" alt="oops">
+                        </div>
+                        <span>JaM Radio</span>
+                    </div>
+                </li>
+                <li id="album">
+                    <div>
+                        <div class="desktop-icon">
+                            <img style="height: 42px;" src="assets/icons/album.png" alt="oops">
+                        </div>
+                        <span>album art</span>
                     </div>
                 </li>
             </ul>
@@ -57,222 +96,25 @@
                 </span>
             </div>
             <div class="inner-wrapper">
-                <div class="text-wrapper">
-                    i like to think of this project as a virtual scrap book. a collection of half forgotten daydreams. a place for you to get away and dream along with me. the playlists we have made for each other have been a beautiful way of communicating our feelings without exchanging a word. i hope this site is aesthetic enough for your study sessions. sometimes i doubt whether anything is real but i know my love for you is real so this must be reality. love is all we have left. i love you my-thy.<br><br>- j
+                <div class="email-format">
+                    <ul>
+                        <li style="padding-top: 4px;">to: </li>
+                        <li>from: </li>
+                        <li style="margin-bottom: 0;">subject: </li>
+                    </ul>
+                    <ul class="email-fields">
+                        <li>mythyn@jamq.fm</li>
+                        <li>joseut@jamq.fm</li>
+                        <li style="margin-bottom: 0;">another love letter</li>
+                    </ul>
                 </div>
-            </div>
-        </div>
-        <!-- daydreams frame -->
-        <div id="daydreams-frame" class="global-item draggable">
-            <div id="daydreamsheader" class="drag-header">
-                <span class="close-icon"></span>
-                <span class="spacer">
-                    <i></i><i></i><i></i>
-                </span>
-            </div>
-            <div class="inner-wrapper">
-                <div class="background-wrapper">
-                    <div>
-                        <ul>
-                            <li id="cd-1">
-                                <div>
-                                    <div class="desktop-icon">
-                                        <img src="assets/icons/cd.png" alt="oops">
-                                    </div>
-                                    <span>space.mp3</span>
-                                </div>
-                            </li>
-                            <li id="cd-2">
-                                <div>
-                                    <div class="desktop-icon">
-                                        <img src="assets/icons/cd.png" alt="oop">
-                                    </div>
-                                    <span>me.mp3</span>
-                                </div>
-                            </li>
-                            <li id="cd-3">
-                                <div>
-                                    <div class="desktop-icon">
-                                        <img src="assets/icons/cd.png" alt="oops">
-                                    </div>
-                                    <span>silly.mp3</span>
-                                </div>
-                            </li>
-                            <li id="cd-4">
-                                <div>
-                                    <div class="desktop-icon">
-                                        <img src="assets/icons/cd.png" alt="oops">
-                                    </div>
-                                    <span>silly.mp3</span>
-                                </div>
-                            </li>
-                            <li id="cd-5">
-                                <div>
-                                    <div class="desktop-icon">
-                                        <img src="assets/icons/cd.png" alt="oops">
-                                    </div>
-                                    <span>space.mp3</span>
-                                </div>
-                            </li>
-                            <li id="cd-6">
-                                <div>
-                                    <div class="desktop-icon">
-                                        <img src="assets/icons/cd.png" alt="oop">
-                                    </div>
-                                    <span>me.mp3</span>
-                                </div>
-                            </li>
-                            <li id="cd-7">
-                                <div>
-                                    <div class="desktop-icon">
-                                        <img src="assets/icons/cd.png" alt="oops">
-                                    </div>
-                                    <span>silly.mp3</span>
-                                </div>
-                            </li>
-                            <li id="cd-8">
-                                <div>
-                                    <div class="desktop-icon">
-                                        <img src="assets/icons/cd.png" alt="oops">
-                                    </div>
-                                    <span>silly.mp3</span>
-                                </div>
-                            </li>
-                            <li id="cd-9">
-                                <div>
-                                    <div class="desktop-icon">
-                                        <img src="assets/icons/cd.png" alt="oops">
-                                    </div>
-                                    <span>space.mp3</span>
-                                </div>
-                            </li>
-                            <li id="cd-10">
-                                <div>
-                                    <div class="desktop-icon">
-                                        <img src="assets/icons/cd.png" alt="oop">
-                                    </div>
-                                    <span>me.mp3</span>
-                                </div>
-                            </li>
-                            <li id="cd-11">
-                                <div>
-                                    <div class="desktop-icon">
-                                        <img src="assets/icons/cd.png" alt="oops">
-                                    </div>
-                                    <span>silly.mp3</span>
-                                </div>
-                            </li>
-                            <li id="cd-12">
-                                <div>
-                                    <div class="desktop-icon">
-                                        <img src="assets/icons/cd.png" alt="oops">
-                                    </div>
-                                    <span>silly.mp3</span>
-                                </div>
-                            </li>
-                            <li id="cd-13">
-                                <div>
-                                    <div class="desktop-icon">
-                                        <img src="assets/icons/cd.png" alt="oops">
-                                    </div>
-                                    <span>space.mp3</span>
-                                </div>
-                            </li>
-                            <li id="cd-14">
-                                <div>
-                                    <div class="desktop-icon">
-                                        <img src="assets/icons/cd.png" alt="oop">
-                                    </div>
-                                    <span>me.mp3</span>
-                                </div>
-                            </li>
-                            <li id="cd-15">
-                                <div>
-                                    <div class="desktop-icon">
-                                        <img src="assets/icons/cd.png" alt="oops">
-                                    </div>
-                                    <span>silly.mp3</span>
-                                </div>
-                            </li>
-                            <li id="cd-16">
-                                <div>
-                                    <div class="desktop-icon">
-                                        <img src="assets/icons/cd.png" alt="oops">
-                                    </div>
-                                    <span>silly.mp3</span>
-                                </div>
-                            </li>
-                            <li id="cd-17">
-                                <div>
-                                    <div class="desktop-icon">
-                                        <img src="assets/icons/cd.png" alt="oops">
-                                    </div>
-                                    <span>space.mp3</span>
-                                </div>
-                            </li>
-                            <li id="cd-18">
-                                <div>
-                                    <div class="desktop-icon">
-                                        <img src="assets/icons/cd.png" alt="oop">
-                                    </div>
-                                    <span>me.mp3</span>
-                                </div>
-                            </li>
-                            <li id="cd-19">
-                                <div>
-                                    <div class="desktop-icon">
-                                        <img src="assets/icons/cd.png" alt="oops">
-                                    </div>
-                                    <span>silly.mp3</span>
-                                </div>
-                            </li>
-                            <li id="cd-20">
-                                <div>
-                                    <div class="desktop-icon">
-                                        <img src="assets/icons/cd.png" alt="oops">
-                                    </div>
-                                    <span>silly.mp3</span>
-                                </div>
-                            </li>
-                            <li id="cd-21">
-                                <div>
-                                    <div class="desktop-icon">
-                                        <img src="assets/icons/cd.png" alt="oops">
-                                    </div>
-                                    <span>space.mp3</span>
-                                </div>
-                            </li>
-                            <li id="cd-22">
-                                <div>
-                                    <div class="desktop-icon">
-                                        <img src="assets/icons/cd.png" alt="oop">
-                                    </div>
-                                    <span>me.mp3</span>
-                                </div>
-                            </li>
-                            <li id="cd-23">
-                                <div>
-                                    <div class="desktop-icon">
-                                        <img src="assets/icons/cd.png" alt="oops">
-                                    </div>
-                                    <span>silly.mp3</span>
-                                </div>
-                            </li>
-                            <li id="cd-24">
-                                <div>
-                                    <div class="desktop-icon">
-                                        <img src="assets/icons/cd.png" alt="oops">
-                                    </div>
-                                    <span>silly.mp3</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="text-wrapper">
+                    i like to think of this project as a virtual scrap book. a collection of half forgotten daydreams. a place for you to get away and dream along with me. the playlists we have made for each other have been a beautiful way of communicating our feelings without exchanging a word. i hope this site is aesthetic enough for your study sessions. sometimes i doubt whether anything is real but i know my love for you is real so this must be reality. love is all we have left. i love you my-thy.<br><br>- with all my love, j
                 </div>
             </div>
         </div>
         <!-- big frame -->
-        <div id="big-frame" class="global-item draggable">
+        <div id="film-frame" class="global-item draggable">
             <div id="big-frameheader" class="drag-header">
                 <span class="close-icon"></span>
                 <span class="spacer">
@@ -288,7 +130,7 @@
             </div>
         </div>
         <!-- small frame -->
-        <div id="small-frame" class="global-item draggable">
+        <div id="daydreams-frame" class="global-item draggable">
             <div id="small-frameheader" class="drag-header">
                 <span class="close-icon"></span>
                 <span class="spacer">
@@ -320,7 +162,7 @@
             </div>
         </div>
         <!-- music player -->
-        <div id="player" class="global-item draggable">
+        <div id="player-frame" class="global-item draggable">
             <div id="playerheader" class="drag-header">
                 <span class="close-icon"></span>
                 <span class="spacer">

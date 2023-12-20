@@ -69,9 +69,6 @@ icons.forEach((icon) => {
 			zHighest = Math.max(zElements[i].style.zIndex, zHighest);
 		}
 		frame.style.zIndex = zHighest + 2;
-		if (icon.id === "daydreams") {
-			document.getElementById("small-frame").style.display = "block";
-		}
 	});
 });
 
@@ -92,10 +89,12 @@ frames.forEach((frame) => {
 	});
 });
 
-const cds = document.querySelectorAll(".background-wrapper ul li");
-const smallFrame = document.getElementById("daydreams-pic");
-cds.forEach((cd) => {
-	cd.addEventListener("dblclick", () => {
-		smallFrame.src = `./assets/memories/${cd.id}.jpg`;
-	});
+const volumeIcon = document.querySelector("#volume-click");
+const slider = document.querySelector(".slider");
+volumeIcon.addEventListener("click", () => {
+	if (slider.style.display === "block") {
+		slider.style.display = "none";
+	} else {
+		slider.style.display = "block";
+	}
 });
