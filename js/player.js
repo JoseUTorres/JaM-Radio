@@ -1,4 +1,10 @@
-let playListArray = [okPlaylist, jqPlaylist, soundtrackPlaylist];
+let playListArray = [
+	okPlaylist,
+	jqPlaylist,
+	soundtrackPlaylist,
+	entropyPlaylist,
+	belovedPlaylist,
+];
 let isLoading = false;
 let currentTrack = document.createElement("audio");
 let trackIndex = 0;
