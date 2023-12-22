@@ -5,6 +5,7 @@ let playListArray = [
 	entropyPlaylist,
 	belovedPlaylist,
 	crazyPlaylist,
+	forPlaylist,
 ];
 let isLoading = false;
 let currentTrack = document.createElement("audio");
