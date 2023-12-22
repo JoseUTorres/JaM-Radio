@@ -18,16 +18,13 @@
         <div class="right-nav">
             <span class="volume-icon">
                 <div id="volume-click" class="item">
-                    <img src="assets/icons/volume.png" alt="oop">
+                    <img id="volume-indicator" src="assets/icons/volume.png" alt="oop">
                 </div>
                 <ul class="slider">
                     <li>
                         <input type="range" min="0" max="100" value="100" class="volume-slider" onchange="setVolume()">
                     </li>
                 </ul>
-                <!-- <div class="slider">
-                    <input type="range" min="1" max="100" value="99" class="volume-slider" onchange="setVolume()">
-                </div> -->
             </span>
             <span id="clock" class="item"></span>
             <span id="date" class="item"></span>
@@ -125,7 +122,11 @@
             </div>
             <div class="inner-wrapper">
                 <div class="image-wrapper">
-                    <img class="big-pic" src="assets/scenery/70290012.JPG" alt="oops">
+                    <img id="film-pic" class="big-pic" src="assets/scenery/tulips.JPG" alt="oops">
+                    <div class="next-bar">
+                        <span id="film-prev" class="prev-image">prev file</span>
+                        <span id="film-next" class="next-image">next file</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -142,6 +143,10 @@
             <div class="inner-wrapper">
                 <div class="image-wrapper bottom-margins">
                     <img id="daydreams-pic" class="small-pic" src="assets/memories/cd-1.jpg" alt="oops">
+                    <div class="next-bar">
+                        <span id="daydreams-prev" class="prev-image">prev file</span>
+                        <span id="daydreams-next" class="next-image">next file</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -186,11 +191,16 @@
                             <ul class="playlists">
                                 <li id="jqPlaylist">JQ Rotation</li>
                                 <li id="okPlaylist">it's ok you're with me</li>
-                                <li id="ourPlaylist">our playlist</li>
+                                <li id="soundtrackPlaylist">a soundtrack for the love i have for you</li>
+                                <li id="entropyPlaylist">the entropy of love</li>
+                                <li id="belovedPlaylist">for my beloved</li>
+                                <li id="crazyPlaylist">that's when i knew i had always been crazy about her</li>
+                                <li id="forPlaylist">FOR THAT ONE GIRL THAT GOES SLDKFJSDLKF</li>
+                                <li id="plsPlaylist">please help me mr.obama</li>
+                                <li id="makingPlaylist">i like making you playlists</li>
                                 <li id="bestiePlaylist">BESTIIIEEEEE</li>
+                                <li id="ourPlaylist">our playlist</li>
                                 <li id="somewherePlaylist">somewhere only we know</li>
-                                <li id="ohPlaylist">oh u like playlists? name every playlist ever made.</li>
-                                <li id="dryPlaylist">for the dry texter</li>
                             </ul>
                         </div>
                     </div>
@@ -226,5 +236,6 @@
 <script src="js/drag.js"></script>
 <script src="js/player.js"></script>
 <script src="js/visualizer.js"></script>
+<script src="js/daydreams.js"></script>
 <script src="js/listeners.js"></script>
 </html>

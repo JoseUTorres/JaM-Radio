@@ -1561,3 +1561,5 @@ const okPlaylist = [
 		list_length: 10,
 	},
 ];
+const soundtrackPlaylistPath = "./audio/soundtrackPlaylist/";
+const soundtrackPlaylist = [];

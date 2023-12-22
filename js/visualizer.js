@@ -48,7 +48,6 @@ function createVisualizer() {
 			if (!bar) {
 				continue;
 			}
-
 			// If fd is undefined, default to 0, then make sure fd is at least 4
 			// This will make make a quiet frequency at least 4px high for visual effects
 			const barHeight = Math.max(5, ratioBar || 0);

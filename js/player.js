@@ -1,4 +1,4 @@
-let playListArray = [okPlaylist, jqPlaylist];
+let playListArray = [okPlaylist, jqPlaylist, soundtrackPlaylist];
 let isLoading = false;
 let currentTrack = document.createElement("audio");
 let trackIndex = 0;
@@ -138,8 +138,19 @@ function setAlbumCover(trackIndex, playlist) {
 	albumCover.src = playlist[trackIndex].cover_url;
 }
 
+const volumeIndicator = document.getElementById("volume-indicator");
 function setVolume() {
+	console.log(volumeSlider.value);
 	currentTrack.volume = volumeSlider.value / 100;
+	if (volumeSlider.value == 100) {
+		volumeIndicator.src = "./assets/icons/volume.png";
+	} else if (volumeSlider.value < 100 && volumeSlider.value >= 50) {
+		volumeIndicator.src = "./assets/icons/volume2.png";
+	} else if (volumeSlider.value < 50 && volumeSlider.value > 0) {
+		volumeIndicator.src = "./assets/icons/volume3.png";
+	} else if (volumeSlider.value == 0) {
+		volumeIndicator.src = "./assets/icons/volume4.png";
+	}
 }
 
 const body = document.getElementById("everything");
