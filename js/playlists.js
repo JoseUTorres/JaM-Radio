@@ -4127,7 +4127,7 @@ const crazyPlaylist = [
 		lyrics: null,
 		popularity: 80,
 		album_id: "7slouenWhZDdDZibkS4nR3",
-		list_name: "that's when i knew i had always been crazy about her",
+		list_name: "i had always been crazy about her",
 		list_url: "https://open.spotify.com/playlist/1EB757ipws0RVggpeWsj84",
 		list_position: 2,
 		list_length: 50,
