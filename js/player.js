@@ -6,6 +6,7 @@ let playListArray = [
 	belovedPlaylist,
 	crazyPlaylist,
 	forPlaylist,
+	plsPlaylist,
 ];
 let isLoading = false;
 let currentTrack = document.createElement("audio");
